@@ -307,6 +307,8 @@ fstream f;
                 f.open("record_acc.txt",ios::in);          //To read existing data from the file
                 for(i=0;i<100;i++){
                 	f.getline(ind,5,'|');
+                	if(strcmp(ind,"")==0)
+                		break;
 						f.getline(acc_no,20,'|');
 						f.getline(name,20,'|');
 						f.getline(age,5,'|');
